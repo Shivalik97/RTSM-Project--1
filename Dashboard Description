@@ -1,0 +1,44 @@
+1. Overview:
+The provided Shiny Dashboard is designed for exploring and analyzing the World Happiness Index data from the years 2015 to 2017. It includes features like data visualization, descriptive statistics, and user interaction elements. The dashboard is structured with a sidebar menu containing various tabs, each serving a specific purpose.
+
+2. User Interface (UI):
+2.1. Dashboard Header:
+The header is titled "Shivalik Singh RTSM Project - 1."
+It includes a menu with options for "Introduction," "Explore World Happiness Index," "Mapping the Data," "Histogram," "Scatter Plot," and "Pairs Scatter Plot."
+2.2. Sidebar:
+The sidebar contains menus for different sections of the dashboard, including "Introduction," "Explore," "Mapping the Data," "Histogram," "Scatter Plot," and "Pairs Scatter Plot."
+Submenus under "Explore" are available for each year (2015, 2016, 2017).
+Each menu item corresponds to a specific tab in the dashboard.
+2.3. Dashboard Body:
+The body consists of tab items, and each tab is associated with a specific function (e.g., histogram, scatter plot, etc.).
+The UI includes customized styles using CSS for the header, navbar, content wrapper, and main sidebar.
+2.4. Styling:
+The dashboard uses a specific color scheme with a yellow header and navbar, gray content wrapper, and teal main sidebar.
+3. Tabs and Functionalities:
+3.1. Introduction (Tab: intro):
+Displays information about the World Happiness Index and the purpose of the dashboard.
+Shows mean, median, standard deviation, and maximum value of the selected dataset and column.
+3.2. Explore (Tab: explore):
+Submenus for each year (2015, 2016, 2017) provide data exploration options.
+3.3. Mapping the Data (Tab: map):
+Allows users to choose a category and visualize the data on a map for each year.
+3.4. Histogram (Tab: hist):
+Generates a histogram based on the user's dataset and variable choices.
+Offers options for selecting the dataset, variable, and number of bins.
+3.5. Scatter Plot (Tab: scatter):
+Creates a scatter plot with options to choose datasets and variables for the x and y axes.
+3.6. Pairs Scatter Plot (Tab: samplepairsplot):
+Utilizes the pairsD3 package to display paired scatter plots based on the chosen dataset.
+3.7. Try your data (Tab: up):
+Allows users to upload their own file, specifying parameters like header, separator, etc.
+Displays information about the uploaded file.
+4. Server-Side Operations:
+4.1. Data Loading and Cleaning:
+Reads data from CSV files for the years 2015, 2016, and 2017.
+Conducts data cleaning operations, such as merging, renaming, and rounding numeric values.
+4.2. Descriptive Statistics:
+Computes mean, median, standard deviation, and maximum value based on user-selected dataset and column.
+4.3. Data Visualization:
+Utilizes various packages (plotly, ggplot2, pairsD3) for creating interactive and static visualizations.
+4.4. Message Display:
+Includes a message box in the header, showing messages to guide user interaction.
