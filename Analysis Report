@@ -1,0 +1,50 @@
+Analysis Report for Shivalik Singh RTSM Project - 1
+User Interface Analysis:
+Libraries:
+The user interface code begins by loading several libraries, including plyr, shiny, shinydashboard, dplyr, tidyr, DT, data.table, rworldmap, plotly, ggplot2, shinyWidgets, and pairsD3.
+The version of the plotly package is checked using packageVersion('plotly').
+Dashboard Structure:
+The Shiny UI is structured using shinyUI() and dashboardPage().
+The dashboard consists of a header (dashboardHeader), a sidebar (dashboardSidebar), and a body (dashboardBody).
+The header contains the project title.
+The sidebar includes menu items for different sections of the dashboard, such as "Introduction," "Explore World Happiness Index," "Mapping the Data," "Histogram," "Scatter Plot," "Pairs Scatter Plot," and "Try your data."
+Dashboard Styling:
+CSS styling is applied to elements using tags$style(HTML(...)). Background colors for various sections are defined.
+Dashboard Tabs:
+The dashboard is organized into tabs using tabItems().
+Tabs include sections for introduction, exploring happiness index data, mapping the data, histogram, scatter plot, pairs scatter plot, and a file upload section.
+Dashboard Components:
+Information boxes (infoBoxOutput) are used to display details about the World Happiness Index and the data source.
+Value boxes (valueBoxOutput) show calculated statistics (mean, median, standard deviation, maximum value) for the selected dataset and column.
+Data tables (renderDataTable) display the World Happiness data for the years 2015, 2016, and 2017.
+Plotly plots (renderPlot) visualize the World Happiness data on maps, histograms, and scatter plots.
+Dashboard Interactivity:
+Reactive elements, such as radio buttons, select inputs, and sliders, are used to dynamically update the displayed content based on user choices.
+External Links:
+A link to the Kaggle website, the source of the datasets, is provided.
+Server-Side Analysis:
+Libraries:
+Similar to the UI, the server code starts by loading the necessary libraries.
+Data Reading and Cleaning:
+Datasets (Happiness_2015, Happiness_2016, Happiness_2017) are read from CSV files.
+Some data cleaning operations include dropping columns, merging categories, correcting values, and rounding numeric columns.
+Shiny Server Function:
+The shiny server function (shinyServer) defines the server-side logic for rendering various components based on user input.
+Message Data:
+A data frame (messageData) is defined to display messages in the dashboard header.
+Output Components:
+Several output components are defined, including message menu, info boxes, value boxes, data tables, and plotly plots.
+For example, the renderMenu, renderInfoBox, renderValueBox, renderDataTable, and renderPlotly functions are used.
+Reactive Elements:
+Reactive elements are used to dynamically compute and update values for mean, median, standard deviation, and maximum value.
+Maps are plotted using the rworldmap package based on user-selected categories.
+Plotly plots for histograms and scatter plots are generated based on user-selected datasets and variables.
+File Upload:
+The code includes a section for users to upload their own data files with options to specify headers, separators, etc.
+Summary and Visualization:
+Summary tables and visualization components are dynamically updated based on the uploaded data.
+Overall Observations:
+The Shiny dashboard is well-organized with interactive elements for exploring World Happiness Index data.
+The code structure is modular, making it easy to maintain and extend.
+The use of reactive elements enhances user interactivity, providing a dynamic and engaging data exploration experience.
+The dashboard is visually appealing with CSS styling and informative components.
